@@ -1,6 +1,6 @@
 import requests as rq
 from bs4 import BeautifulSoup as bs
-song = ""
+song = input("Enter song: ")
 # Making the parameters for the url
 url_params = {"q": song.lower()}
 # Making a get request to the azlyric's search ulr + passing the above parameters to it
@@ -16,5 +16,5 @@ soup_2 = bs(lyrics_page.text, "lxml")
 lyrics = soup_2.find("div", {"class": "col-xs-12 col-lg-8 text-center"}).find_all("div")[6].get_text()
 # Make a list with every line of the lyrics as a element and remove the first 2 because are html notes
 lines = lyrics.splitlines()[2:]
-processed_lyrics = "\n".join(line)
+processed_lyrics = "\n".join(lines)
 print(processed_lyrics)
