@@ -50,7 +50,7 @@ def find_lyrics(song=None):
 
 		return processed_lyrics, search_time
 	except:
-		return "\"%s\" Not Found..." % (song)
+		return "\"%s\" Not Found..." % (song), None
 
 if __name__ == "__main__":
 	print(find_lyrics()[0])
