@@ -1,0 +1,8 @@
+Python => 3.8.0
+
+requests => 2.22.0
+selenium => 3.141.0
+beautifulsoup4 => 4.8.1
+
+Google Chrome => 78.0.3904.87
+chromedriver => 78.0.3904.70
